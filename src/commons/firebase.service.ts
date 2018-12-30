@@ -9,12 +9,12 @@ import "firebase/functions";
 import "firebase/messaging";
 
 const config = {
-  apiKey: "AIzaSyArzsOBpR3FNIGbf9xG_Qj9zs8_Y85i21A",
-  authDomain: "a20j-5112b.firebaseapp.com",
-  databaseURL: "https://a20j-5112b.firebaseio.com",
-  messagingSenderId: "348707571812",
-  projectId: "a20j-5112b",
-  storageBucket: "a20j-5112b.appspot.com",
+  apiKey: "AIzaSyDKVx23-RXumPuqP0fOd04VFJAwh8bzfok",
+  authDomain: "access2justice-222101.firebaseapp.com",
+  databaseURL: "https://access2justice-222101.firebaseio.com",
+  messagingSenderId: "494375994655",
+  projectId: "access2justice-222101",
+  storageBucket: "",
 };
 
 export class FirebaseService {

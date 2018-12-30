@@ -1,0 +1,10 @@
+.navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  div {
+    height: 80px;
+    width: 100%;
+  }
+}
