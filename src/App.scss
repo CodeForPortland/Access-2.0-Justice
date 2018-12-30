@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-areas: "nav content";
+  grid-template-columns: 92px 1fr;
+  grid-template-rows: 100vh;
+}
+
+.nav-container {
+  grid-area: nav;
+}
+
+.content-container {
+  grid-area: content;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

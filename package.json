@@ -1,0 +1,35 @@
+{
+  "name": "access2.0justice",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^5.7.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts-ts": "4.0.8",
+    "redux": "^4.0.1",
+    "rxjs": "^6.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/firebase": "^3.2.1",
+    "node-sass": "^4.11.0",
+    "tachyons": "^4.10.0",
+    "typescript": "^3.2.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
