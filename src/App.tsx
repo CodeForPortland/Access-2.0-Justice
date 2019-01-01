@@ -1,26 +1,28 @@
 /* tslint:disable:no-console jsx-no-lambda */
 import * as React from 'react';
-import { NavComponent } from "./components/nav/nav.component";
+
 import { RoutesComponent } from "./router/routes.component";
+
+import { NavComponent } from "./components/nav/nav.component";
 
 import './App.scss';
 
 export interface IAppProps {
   tiles: string[];
+  history?: any;
 }
 
 export interface IAppState {
   activeTile: string;
-  logedIn: boolean;
+  loggedIn: boolean;
 }
 
 class App extends React.Component<IAppProps, IAppState> {
 
   public state: IAppState = {
     activeTile: 'dashboard',
-    login: false
+    loggedIn: false
   };
-
 
   constructor(public props: IAppProps) {
     super(props);
@@ -28,13 +30,11 @@ class App extends React.Component<IAppProps, IAppState> {
   }
 
   public navigationHandler(name: string): void {
-    switch(name) {
-      case'login':
-
-    }
+    this.props.history.push('/' + name);
   }
 
   public render() {
+
     return (
       <div className="App">
         <nav className="nav-container">
@@ -43,7 +43,6 @@ class App extends React.Component<IAppProps, IAppState> {
                         navigationHandler={this.navigationHandler} />
         </nav>
         <main className="content-container">
-          {process.env.REACT_APP_FIREBASE_CONFIG_JSON}
           <RoutesComponent/>
         </main>
       </div>

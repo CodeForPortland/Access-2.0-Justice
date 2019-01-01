@@ -9,8 +9,12 @@ export const NavTileComponent = (props: {name: string, active: boolean, handler:
     return props.active ? baseClass.concat(' active') : baseClass;
   };
 
+  function clickHandler(event: React.MouseEvent): void {
+    props.handler(props.name);
+  }
+
   return (
-    <div className={className()}>
+    <div className={className()} onClick={clickHandler}>
       {SVGs[props.name]}
       <span className="nav-tile--label">{props.name}</span>
     </div>

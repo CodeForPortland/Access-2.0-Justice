@@ -13,7 +13,7 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
-    <App tiles={TILES}/>
+    <App tiles={TILES} history={history}/>
   </Router>,
   document.getElementById('root') as HTMLElement
 );

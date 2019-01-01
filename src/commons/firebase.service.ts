@@ -8,14 +8,18 @@ import "firebase/firestore";
 import "firebase/functions";
 import "firebase/messaging";
 
-const config = {
-  apiKey: "AIzaSyDKVx23-RXumPuqP0fOd04VFJAwh8bzfok",
-  authDomain: "access2justice-222101.firebaseapp.com",
-  databaseURL: "https://access2justice-222101.firebaseio.com",
-  messagingSenderId: "494375994655",
-  projectId: "access2justice-222101",
-  storageBucket: "",
-};
+interface IFirebaseConfig {
+  apiKey: string;
+  authDomain: string;
+  databaseURL: string;
+  messagingSenderId: string;
+  projectId: string;
+  storageBucket: string;
+}
+
+const config: IFirebaseConfig = JSON.parse(process.env.REACT_APP_FIREBASE_CONFIG_JSON as string) ;
+
+console.log(config);
 
 export class FirebaseService {
 
