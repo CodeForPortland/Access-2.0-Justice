@@ -1,22 +1,24 @@
 import * as React from 'react';
 
-import {SVGs} from "../../commons/svg.list";
+import { Link } from "react-router-dom";
+import { SVGs } from "../../commons/svg.list";
 
-export const NavTileComponent = (props: {name: string, active: boolean, handler: (name: string) => void }) => {
+export interface INavTileComponentProps {
+  name: string;
+  active: boolean;
+}
+
+export const NavTileComponent = (props: INavTileComponentProps) => {
 
   const className = () => {
     const baseClass =  'nav-tile_' + props.name;
     return props.active ? baseClass.concat(' active') : baseClass;
   };
 
-  function clickHandler(event: React.MouseEvent): void {
-    props.handler(props.name);
-  }
-
   return (
-    <div className={className()} onClick={clickHandler}>
+    <Link className={className()} to={name}>
       {SVGs[props.name]}
       <span className="nav-tile--label">{props.name}</span>
-    </div>
+    </Link>
   );
 };

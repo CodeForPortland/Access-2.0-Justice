@@ -1,20 +1,28 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-areas: "nav content";
-  grid-template-columns: 92px 1fr;
-  grid-template-rows: 100vh;
+  grid-template-areas:
+          "header header"
+          "nav content";
+  grid-template-columns: 116px 1fr;
+  grid-template-rows: 92px 1fr;
+  background: whitesmoke;
+}
 
-  background: #262a2f;
-  color: white;
+.header-container {
+  grid-area: header;
 }
 
 .nav-container {
   grid-area: nav;
+  min-height: calc(100vh - 92px);
+
 }
 
 .content-container {
   grid-area: content;
+  background: white;
+  min-height: calc(100vh - 92px);
 }
 
 @keyframes spin {

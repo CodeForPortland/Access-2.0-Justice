@@ -1,9 +1,8 @@
 /* tslint:disable:no-console jsx-no-lambda */
 import * as React from 'react';
-
-import { RoutesComponent } from "./router/routes.component";
-
+import { HeaderComponent } from "./components/header/header.component";
 import { NavComponent } from "./components/nav/nav.component";
+import { RoutesComponent } from "./router/routes.component";
 
 import './App.scss';
 
@@ -26,21 +25,18 @@ class App extends React.Component<IAppProps, IAppState> {
 
   constructor(public props: IAppProps) {
     super(props);
-    this.navigationHandler = this.navigationHandler.bind(this);
-  }
-
-  public navigationHandler(name: string): void {
-    this.props.history.push('/' + name);
   }
 
   public render() {
 
     return (
       <div className="App">
+        <header className="header-container">
+          <HeaderComponent/>
+        </header>
         <nav className="nav-container">
           <NavComponent tiles={this.props.tiles}
-                        active={this.state.activeTile}
-                        navigationHandler={this.navigationHandler} />
+                        active={this.state.activeTile}/>
         </nav>
         <main className="content-container">
           <RoutesComponent/>
