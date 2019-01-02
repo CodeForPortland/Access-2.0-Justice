@@ -7,6 +7,11 @@ export interface ILoginComponentState {
 
 export function loginReducer(state: ILoginComponentState, action: Action) {
   switch (action.type) {
-
+    case'login':
+      return {...state, loggedIn: true};
+    case'logout':
+      return {...state, loggedIn: false};
+    default:
+      return state;
   }
 }
