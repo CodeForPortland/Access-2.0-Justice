@@ -2,6 +2,7 @@
 import FormControl from '../../shared/FormControl';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import './SigninForm.scss';
 
 
 export class SigninForm extends PureComponent {
@@ -33,19 +34,18 @@ export class SigninForm extends PureComponent {
 
 		return (
 				<form onSubmit={this.handleSubmit}>
-					<h3>Sign in here</h3>
 
 					<FormControl label="email">
-						<input name="email" value={email} onChange={this.handleChange}/>
+						<input className="form-boxes" name="email" value={email} onChange={this.handleChange}/>
 					</FormControl>
 					
 					<FormControl label="password">
-						<input name="password" type="password" 
+						<input className="form-boxes" name="password" type="password" 
 							value={password} onChange={this.handleChange}/>
 					</FormControl>
 
 					<FormControl>
-						<button>{action}</button>
+						<button className="form-boxes">{action}</button>
 					</FormControl>
 				</form>
 		);
