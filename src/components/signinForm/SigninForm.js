@@ -1,7 +1,9 @@
 /* tslint:disable:no-empty */
 import FormControl from '../../shared/FormControl';
-import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
+import React, { PureComponent } from 'react';
+
 import './SignInForm.scss';
 
 
