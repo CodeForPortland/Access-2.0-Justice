@@ -2,10 +2,10 @@
 import FormControl from '../../shared/FormControl';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './SigninForm.scss';
+import './SignInForm.scss';
 
 
-export class SigninForm extends PureComponent {
+export class SignInForm extends PureComponent {
 
 	state = {
 		email: '',
