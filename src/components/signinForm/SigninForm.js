@@ -36,12 +36,13 @@ export class SigninForm extends PureComponent {
 				<form onSubmit={this.handleSubmit}>
 
 					<FormControl label="email">
-						<input className="form-boxes" name="email" value={email} onChange={this.handleChange}/>
+						<input className="form-boxes" name="email" value={email} 
+							onChange={this.handleChange}/>
 					</FormControl>
 					
 					<FormControl label="password">
-						<input className="form-boxes" name="password" type="password" 
-							value={password} onChange={this.handleChange}/>
+						<input className="form-boxes" name="password" value={password} type="password" 
+							onChange={this.handleChange}/>
 					</FormControl>
 
 					<FormControl>

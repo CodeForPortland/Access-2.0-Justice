@@ -38,9 +38,9 @@ export class LoginComponent extends React.Component {
           <div className="dib h3 w3 pa1 bg-white">
             {SVGs.google}
           </div>
-        <span className="f6 ml3 pr2">
-          Sign in with Google
-        </span>
+          <span className="f6 ml3 pr2">
+            Sign in with Google
+          </span>
         </button>
       </div>
     );
