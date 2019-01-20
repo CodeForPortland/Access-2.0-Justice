@@ -34,7 +34,7 @@ export class LoginComponent extends React.Component {
         <h1>Please Login</h1>
         <SignInForm />
         <button className="Button--GoogleSignIn no-underline near-white bg-animate bg-dark-blue hover-bg-gray inline-flex items-center ma2 tc br2 pa0"
-                onClick={this.loginClickHandler}>
+          onClick={this.loginClickHandler}>
           <div className="dib h3 w3 pa1 bg-white">
             {SVGs.google}
           </div>
